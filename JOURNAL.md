@@ -16,7 +16,7 @@ This issue affects the safety layer, specifically the PII scrubber. The current 
 **Setup confirmation:** [x] Frontend runs locally at localhost:5173  
 Backend setup was partially completed. Docker, PostgreSQL, Redis, and the frontend were configured, but backend startup exposed duplicate SQLAlchemy index issues in the starter project.
 
-**Cohort ledger:** [ ] Issue added to cohort ledger
+**Cohort ledger:** [x] Issue added to cohort ledger
 
 **Selection notes:**
 I chose a Tier 1 safety issue because it appears focused on one behavior in the PII scrubber rather than requiring broad architectural changes. The expected fix should likely involve updating a regex or detection pattern and adding a focused test case.

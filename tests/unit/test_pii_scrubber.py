@@ -252,3 +252,9 @@ class TestPIIScrubber:
 
         # Should be minimal or no detections
         # (version number shouldn't be flagged as SSN)
+    def test_scrub_parenthesized_us_phone_number(self, scrubber):
+        text = "Call me at (415) 555-1234."
+        result = scrubber.scrub(text)
+
+        assert "(415) 555-1234" not in result
+        assert "[REDACTED]" in result   

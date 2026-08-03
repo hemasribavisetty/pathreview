@@ -43,3 +43,57 @@ Not recorded.
 
 **Blockers or open questions:**
 The backend setup exposed startup issues in the provided starter repository. Although the frontend and Docker services were configured successfully, the backend initialization encountered database startup issues. While waiting for guidance from the course staff, I continued analyzing the relevant code and prepared a detailed implementation plan for the assigned issue.
+
+
+## Week 9 — Solution building & PR submission
+
+### Check-in 1 (mid-week)
+
+**Current progress:**
+
+- Investigated the PII scrubber implementation.
+- Identified the phone-number regular expression causing the issue.
+- Planned the implementation.
+- Updated the regex.
+- Verified issue-specific tests.
+
+**Next steps:**
+
+Open the pull request, request review, and complete final testing.
+
+**Blockers:**
+
+The backend setup exposed unrelated startup issues in the starter repository, but they did not prevent implementation of Issue #146.
+
+---
+
+### Check-in 2 (end of week)
+
+**PR link:**
+
+<GitHub PR URL>
+
+**Branch:**
+
+fix/146-redact-parenthesized-phone-numbers
+
+**What you built:**
+
+Updated the US phone-number detection logic so that phone numbers written with parentheses around the area code are correctly detected and redacted. Existing supported US phone-number formats continue to work.
+
+**Tests added or updated:**
+
+Updated:
+
+- tests/unit/test_pii_scrubber.py
+
+Verified phone-number detection and redaction behavior.
+
+**Self-review confirmation:**
+
+- [ ] make check passes
+- [ ] make test-unit passes
+
+**Draft PR feedback received from:**
+
+None
